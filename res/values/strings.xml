@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SpodeliWifi</string>
+    <string name="Scan">Scan</string>
+    <string name="AccessPointName">Access point name</string>
+    <string name="Password">Password</string>
+    <string name="Sync">Sync</string>
+    <string name="AddNew">Add New</string>
+    <string name="ShowAll">Show All</string>
+
+</resources>

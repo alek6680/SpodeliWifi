@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- This is the line -->
+    <item>
+        <shape>
+            <corners
+                android:bottomLeftRadius="3dip"
+                android:bottomRightRadius="3dip" />
+
+            <solid android:color="#cfcecc" />
+        </shape>
+    </item>
+    <item android:bottom="2dip">
+        <shape>
+            <corners
+                android:bottomLeftRadius="3dip"
+                android:bottomRightRadius="3dip" />
+
+            <solid android:color="#e9e7e7" />
+        </shape>
+    </item>
+
+</layer-list>
