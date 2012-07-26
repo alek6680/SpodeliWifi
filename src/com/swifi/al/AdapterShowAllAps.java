@@ -1,8 +1,6 @@
 package com.swifi.al;
 
 import java.util.ArrayList;
-import org.w3c.dom.Text;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;

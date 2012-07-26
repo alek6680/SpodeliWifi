@@ -1,15 +1,12 @@
 package com.swifi.al;
 
-import java.security.acl.LastOwnerException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.os.Environment;
 import android.database.DatabaseUtils.InsertHelper;
 
 public class DatabaseAccessPoints extends SQLiteOpenHelper {

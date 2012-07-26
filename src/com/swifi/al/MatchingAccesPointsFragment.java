@@ -20,7 +20,6 @@ import android.net.wifi.WifiManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -105,10 +104,8 @@ public class MatchingAccesPointsFragment extends Fragment implements
 						.getParcelableExtra(ConnectivityManager.EXTRA_NETWORK_INFO);
 
 				String state = currentNetworkInfo.getDetailedState().name();
-				Log.d("xxxX", "reason: " + reason);
 
 				// CONNECTED or DISCONNECTED
-				Log.d("xxxX", "state: " + state);
 				if (currentNetworkInfo.getTypeName().equalsIgnoreCase("WIFI")) {
 					if (currentNetworkInfo.isConnected()) {
 						Toast.makeText(getActivity(), "Wifi Connected...",
@@ -123,10 +120,7 @@ public class MatchingAccesPointsFragment extends Fragment implements
 						Toast.makeText(getActivity(), reason,
 								Toast.LENGTH_SHORT).show();
 					else if (state.equalsIgnoreCase("DISCONNECTED")) {
-						// SupplicantState s =
-						// mWiFiManager.getConnectionInfo().getSupplicantState();
-						// NetworkInfo.DetailedState supstate =
-						// WifiInfo.getDetailedStateOf(s);
+
 						Toast.makeText(getActivity(), "Wifi Disconnected...",
 								Toast.LENGTH_SHORT).show();
 						mWiFiManager.removeNetwork(netId);
@@ -136,8 +130,7 @@ public class MatchingAccesPointsFragment extends Fragment implements
 
 					}
 				}
-				// Log.d("xxx",
-				// reason + " *** " + currentNetworkInfo.getExtraInfo());
+				
 			}
 		};
 
@@ -236,12 +229,12 @@ public class MatchingAccesPointsFragment extends Fragment implements
 
 								}
 							});
-					
+
 				}
 			} else {
 				Utils.showToastMsg(getActivity(), "No AP's found");
 			}
-			
+
 			dialog.dismiss();
 		}
 
@@ -279,7 +272,7 @@ public class MatchingAccesPointsFragment extends Fragment implements
 			mWiFiManager.enableNetwork(netId, true);
 			getActivity().registerReceiver(mBroadcastReceiverWifiChanges,
 					intentFilter);
-			getActivity().registerReceiver(br, ifil);
+			
 			// receiverRegistered = true;
 			new isConnected().execute();
 

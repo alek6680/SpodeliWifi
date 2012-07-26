@@ -353,9 +353,7 @@ public class SWifiActivity extends SherlockFragmentActivity implements
 						"Failed to add Access point ", Toast.LENGTH_LONG)
 						.show();
 
-			} // add for connection problem
-
-			// linearProgress.setVisibility(View.GONE);
+			} 
 			dialog.dismiss();
 			super.onPostExecute(result);
 		}
